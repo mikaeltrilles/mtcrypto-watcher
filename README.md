@@ -1,4 +1,16 @@
-# MT Crypto Watcher
+# Beontrade Watchlist
+
+Utilisation de l'api de Coingecko pour récupérer les données de la watchlist.
+Lien de la doc : [https://www.coingecko.com/fr/api/documentation](https://www.coingecko.com/fr/api/documentation)
+
+Utilisation de recharts treemap pour afficher les données de la watchlist.
+lien de la doc : [https://recharts.org/en-US/examples/CustomContentTreemap](https://recharts.org/en-US/examples/CustomContentTreemap)
+
+Installation de recharts treemap :
+
+```bash
+npm install recharts
+```
 
 Market data : `https://api.coingecko.com/api/v3/global`
 
