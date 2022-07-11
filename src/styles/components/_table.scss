@@ -26,19 +26,19 @@
     width: 100%;
     z-index: 100000;
     transition: 0;
-
+    //* 🇫🇷 Affichage de la barre de navigation en haut d'écran - 🇺🇸 Display the  navbar at the top of the screen
     &.active {
-      position: fixed;
+      position: fixed;  //* 🇫🇷 Positionnement de la barre de navigation en haut d'écran - 🇺🇸 Positioning the navbar at the top of the screen
       max-width: 1200px;
       top: 0;
-      background: rgba(52, 52, 52, 0.8);
-      backdrop-filter: blur(2px);
-      opacity: 0;
+      background: rgba(52, 52, 52, 0.8);  //* 🇫🇷 Couleur de la barre de navigation en haut d'écran - 🇺🇸 Color of the navbar at the top of the screen
+      backdrop-filter: blur(2px); //* 🇫🇷 Effet de flou de la barre de navigation en haut d'écran - 🇺🇸 Blur effect of the navbar at the top of the screen
+      opacity: 0; //* 🇫🇷 Opacité de la barre de navigation en haut d'écran - 🇺🇸 Opacity of the navbar at the top of the screen
       top: -10px;
-      animation: navAnim 0.3s forwards;
+      animation: navAnim 0.3s forwards; //* 🇫🇷 Animation de la barre de navigation en haut d'écran - 🇺🇸 Animation of the navbar at the top of the screen
       border-bottom: 1px solid rgb(77, 77, 77);
 
-      @keyframes navAnim {
+      @keyframes navAnim {  //* 🇫🇷 Animation de la barre de navigation en haut d'écran - 🇺🇸 Animation of the navbar at the top of the screen
         to {
           opacity: 1;
           top: 0;
