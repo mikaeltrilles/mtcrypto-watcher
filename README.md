@@ -1,4 +1,6 @@
-# Beontrade Watchlist
+🇫🇷 Français
+-
+# ₿eontrade Watchlist
 
 ![Time to Code](https://wakatime.com/badge/user/933ebfa6-42e4-4a54-b3fc-658e9f1ab22f/project/dbb5c8a3-45a8-4a2f-bd51-bef69daa5649.svg)
 
@@ -28,6 +30,32 @@ npm install recharts
 ```
 
 Ce qui nous donne ce joli résultat :  
-![header](src/assets/readme/header.jpg)  
-
+![header](src/assets/readme/header.jpg)
+  
 Coin price chart : `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${duration}${duration > 32 ? "&interval=daily" : ""}`
+
+----------------------------------------------------------------------
+🇺🇸 English
+-
+# ₿eontrade Watchlist
+
+  Link to the [Coingecko](https://www.coingecko.com/en) website  
+  Link to the [Coingecko API documentation](https://www.coingecko.com/en/api/documentation)  
+
+  List of APIs used to get the data:
+  * [Global Market Data](https://api.coingecko.com/api/v3/global)
+  * [Detailed data by crypto](https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C14d%2C30d%2C200d%2C1y)
+  
+  Base address for the access to the detailed data of the crypto: "https://www.coingecko.com/en/coins/"
+
+-------
+
+For the treemap, we use recharts. Link to the [recharts documentation](https://recharts.org/en-US/examples/CustomContentTreemap) 
+
+Install recharts treemap :
+
+```bash
+npm install recharts
+```
+The first result is :
+![header](src/assets/readme/header.jpg)

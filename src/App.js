@@ -31,7 +31,7 @@ const App = () => {
         <p>{Date()}</p>
       </header>
       <Table coinsData={coinsData} />
-      <ToTop />
+      <ToTop /> Made with ❤️ by Mikael Trilles.
     </div>
   );
 };
