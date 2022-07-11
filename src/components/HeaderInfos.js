@@ -19,7 +19,7 @@ const HeaderInfos = () => {
     <div className="header-container">
       <ul className="title">
         <li>
-          <h1><img src="#" alt="" />₿eontrade</h1>
+          <h1><img src="assets/logo.png" alt="" /></h1>
         </li>
         {/* * Affichage avce separatuer des milliers */}
         <li>Crypto-monnaies :{" "}

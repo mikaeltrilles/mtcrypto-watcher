@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import colors from "../styles/_settings.scss";
 
+  //* Ici je gère le changement de la couleur en fonction du pourcentage positif ou négatif
+
 const PercentChange = ({ percent }) => {
   const [color, setColor] = useState();
 

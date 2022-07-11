@@ -2,10 +2,18 @@ import axios from "axios";
 import React, { useEffect, useState } from 'react';
 import HeaderInfos from './components/HeaderInfos';
 import GlobalChart from './components/GlobalChart';
+import Table from './components/Table';
+import ToTop from './components/ToTop';
+
+
 
 const App = () => {
   //* Permet de changer le contenu des cryptos de la page
   const [coinsData, setCoinsData] = useState([]);
+
+  //* Format de la date
+
+
 
   //* Récupération des données de l'API avec axios
   useEffect(() => {
@@ -19,8 +27,11 @@ const App = () => {
       <header>
         <HeaderInfos />
         {/* * Je passe les données (data) des monnaies (coins) en props */}
-        <GlobalChart coinsData={coinsData}/>
+        <GlobalChart coinsData={coinsData} />
+        <p>{Date()}</p>
       </header>
+      <Table coinsData={coinsData} />
+      <ToTop />
     </div>
   );
 };

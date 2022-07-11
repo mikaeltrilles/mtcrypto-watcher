@@ -2,19 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap");
 
-//* Cjoix des couleurs utilisées dans le projet
+//* Choix des couleurs utilisées dans le projet
 $font1: "Saira Condensed", sans-serif;
 $font2: "Baloo Bhaina 2", cursive;
-$color1: #00b7b3;
-$green2: rgb(0, 253, 148);
-$green1: rgb(2, 172, 81);
-$red1: rgb(255, 111, 86);
-$red2: rgb(251, 69, 63);
-$white1: rgb(219, 217, 217);
-$white2: rgb(172, 172, 172);
-$black1: rgb(31, 31, 31);
-$black2: rgb(10, 10, 10);
-$shadow: 0 5px 15px rgba(0, 0, 0, 0.322);
+$color1: #9ce201; //00b7b3
+$green2: #00fd94;
+$green1: #02ac51;
+$red1: #ff6f56;
+$red2: #fb453f;
+$white1: #dbd9d9;
+$white2: #acacac;
+$black1: #1f1f1f;
+$black2: #0a0a0a;
+$shadow: 0 5px 15px #00000052;
 
 
 // * Exportation des couleurs dans une variable
@@ -27,6 +27,8 @@ $shadow: 0 5px 15px rgba(0, 0, 0, 0.322);
   black1: $black1;
   black2: $black2;
   white1: $white1;
+  white2: $white2;
+  shadow: $shadow;
 }
 
 * {

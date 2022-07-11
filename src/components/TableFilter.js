@@ -1,5 +1,7 @@
 import React from 'react';
 
+//* Composant du header de la page bouton de selection de la liste des crypto (avec ou sans stable coin + aucune liste + liste des favoris)
+
 const TableFilter = () => {
   return (
     <div className="table-filters">
