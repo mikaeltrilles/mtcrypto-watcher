@@ -1,5 +1,6 @@
 import React from 'react';
 import PercentChange from './PercentChange';
+import Favorites from './Favorites';
 
 //* Ce composant permet de générer les lignes du tableau des cryptos en recupérant les données de l'API
 
@@ -29,7 +30,7 @@ const TableLine = ({ coin, index }) => {
   return (
     <div className="table-line">
       <div className="infos-container">
-        <span>*</span>
+        <Favorites coinId = {coin.id} />
         <p>{index + 1}</p>
         <div className="img">
           <img src={coin.image} alt={coin.symbol} height="20" />
