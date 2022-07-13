@@ -271,9 +271,9 @@ API :
 ## Here is a preview of the site
 ![preview](src/assets/readme/preview.png)
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://www.buymeacoffee.com/mtdevweb)
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://www.buymeacoffee.com/mtdevweb)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://www.buymeacoffee.com/mtdevweb)
 
 ## If you like this project, please consider donating with Bitcoin or Buy my a coffee
 
