@@ -17,8 +17,8 @@ const Favorites = ({ coinId }) => {
     }
   });
 
-// ⁡⁢⁣⁢🇫🇷 Fonction qui permet d'ajouter/retirer une crypto à la liste des favoris
-// ⁡⁣⁢⁣🇺🇸 Function to add/remove a crypto to the favorites list⁡
+  // ⁡⁢⁣⁢🇫🇷 Fonction qui permet d'ajouter/retirer une crypto à la liste des favoris
+  // ⁡⁣⁢⁣🇺🇸 Function to add/remove a crypto to the favorites list⁡
 
   const idChecker = (id) => {
     let favList = null;

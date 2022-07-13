@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PercentChange from './PercentChange';
 import Favorites from './Favorites';
+import CoinChart from './CoinChart';
 
 //* Ce composant permet de générer les lignes du tableau des cryptos en recupérant les données de l'API
 
 const TableLine = ({ coin, index }) => {
+
+  //* Boulen qui permet de savoir si on montre le graphique ou pas
+
+  const [showChart, setShowChart] = useState(false);
 
   //* Fonction pour formatter le prix d'une petite crypto entre 0 et 1$
   //* Formule trouvé sur https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
@@ -30,14 +35,20 @@ const TableLine = ({ coin, index }) => {
   return (
     <div className="table-line">
       <div className="infos-container">
-        <Favorites coinId = {coin.id} />
+        <Favorites coinId={coin.id} />
         <p>{index + 1}</p>
         <div className="img">
           <img src={coin.image} alt={coin.symbol} height="20" />
         </div>
         <div className="infos">
-          <div className="chart-img">
+          <div className="chart-img"
+            onMouseEnter={() => setShowChart(true)}     // Au passage de la souris on affiche le graphique
+            onMouseLeave={() => setShowChart(false)}    // A la sortie de la souris on cache le graphique
+          >
             <img src="assets/chart-icon.svg" alt="chart-icon" />
+            <div className="chart-container" id={coin.name}>
+              {showChart && <CoinChart coin={coin} />}
+            </div>
           </div>
           <h4> {coin.name} </h4>
           <span>- {coin.symbol.toUpperCase()}</span>
@@ -45,9 +56,9 @@ const TableLine = ({ coin, index }) => {
             target="_blank"
             href={"https://www.coingecko.com/fr/pi%C3%A8ces/" + coin.name
               .toLowerCase()
-              .replace(" ", "-") //* Remplace le premier espace par un tiret
-              .replace(" ", "-") //* Remplace le deuxieme espace par un tiret
-              .replace(" ", "-") //* Remplace le troisième espace par un tiret au cas ou d'une monnaie a quatre termes
+              .replace(" ", "-") // Remplace le premier espace par un tiret
+              .replace(" ", "-") // Remplace le deuxieme espace par un tiret
+              .replace(" ", "-") // Remplace le troisième espace par un tiret au cas ou d'une monnaie a quatre termes
             }
           >
             <img src="assets/info-square.svg" alt="info" />

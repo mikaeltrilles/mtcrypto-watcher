@@ -1,6 +1,6 @@
 # ₿eontrade WatchList 🇺🇸
 
-![Time to Code](https://wakatime.com/badge/user/933ebfa6-42e4-4a54-b3fc-658e9f1ab22f/project/dbb5c8a3-45a8-4a2f-bd51-bef69daa5649.svg)
+[![wakatime](https://wakatime.com/badge/user/933ebfa6-42e4-4a54-b3fc-658e9f1ab22f/project/966d1b96-0d87-43ee-96c6-de90f183c69e.svg)](https://wakatime.com/badge/user/933ebfa6-42e4-4a54-b3fc-658e9f1ab22f/project/966d1b96-0d87-43ee-96c6-de90f183c69e)
 [![GitHub version](https://badge.fury.io/gh/mikaeltrilles%2Fbeontrade-watcher.svg)](https://badge.fury.io/gh/mikaeltrilles%2Fbeontrade-watcher)
 [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 [![Donate with Bitcoin](https://en.cryptobadges.io/badge/micro/3DACSr469ga7Xb2BbfVvC58qMZ74oZapJU)](https://en.cryptobadges.io/donate/3DACSr469ga7Xb2BbfVvC58qMZ74oZapJU)
