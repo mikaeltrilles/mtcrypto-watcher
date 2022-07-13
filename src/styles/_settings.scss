@@ -7,7 +7,8 @@
 
 $font1: "Saira Condensed", sans-serif;
 $font2: "Baloo Bhaina 2", cursive;
-$color1: #9ce201; //00b7b3
+$color1: #9ce201; //00b7b3 
+$green3: #8BAC35;
 $green2: #00fd94;
 $green1: #02ac51;
 $red1: #ff6f56;
@@ -22,6 +23,7 @@ $shadow: 0 5px 15px #00000052;
 //* 🇫🇷 Exportation des couleurs dans une variable - 🇺🇸 Exportcolors on a var
 :export {
   color1: $color1;
+  green3: $green3;
   green2: $green2;
   green1: $green1;
   red1: $red1;

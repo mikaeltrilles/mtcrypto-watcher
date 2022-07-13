@@ -46,8 +46,9 @@ const TableLine = ({ coin, index }) => {
             onMouseLeave={() => setShowChart(false)}    // A la sortie de la souris on cache le graphique
           >
             <img src="assets/chart-icon.svg" alt="chart-icon" />
+            {/* On affiche le graphique si showChart est à true */}
             <div className="chart-container" id={coin.name}>
-              {showChart && <CoinChart coin={coin} />}
+              {showChart && <CoinChart coinId={coin.id} coinName={coin.name} />}
             </div>
           </div>
           <h4> {coin.name} </h4>

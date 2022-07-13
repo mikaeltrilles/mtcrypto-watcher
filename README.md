@@ -269,7 +269,18 @@ API :
 ```
 
 ## Here is a preview of the site
+
 ![preview](src/assets/readme/preview.png)
+
+## Coingecko API & Chart
+
+Coin price chart API structure :
+
+```url
+https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${duration}${duration > 32 ? "&interval=daily" : ""}
+```
+
+![chart](src/assets/readme/chart.jpg)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://www.buymeacoffee.com/mtdevweb)
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://www.buymeacoffee.com/mtdevweb)

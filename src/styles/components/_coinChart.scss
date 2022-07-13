@@ -43,12 +43,12 @@
         display: flex;
         justify-content: center;
 
-        &.active-btn {
-          background: $color1;
+        &.active-btn { // bouton actif dans le graphique
+          background: $green3;
           padding: 2px 4px;
         }
         &:hover {
-          background: $color1;
+          background: $green3;
         }
       }
     }
