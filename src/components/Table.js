@@ -28,7 +28,7 @@ const Table = ({ coinsData }) => {
   //* Variable qui permet de filtrer les données du tableau
   const [orderBy, setOrderBy] = useState("");
 
-  console.log(coinsData);
+  // console.log(coinsData);
 
   return (
     <div className="table-container">
