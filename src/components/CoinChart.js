@@ -43,7 +43,7 @@ const CoinChart = ({ coinId, coinName }) => {
             price: price < "50" ? price : parseInt(price),              // On récupère le prix de la crypto et on le formate si < à 50
           });
         }
-        //? console.log(dataArray);
+        // console.log(dataArray);
         setCoinData(dataArray);
       })
     //? console.log(duration);
