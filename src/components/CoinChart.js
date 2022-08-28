@@ -3,7 +3,7 @@ import axios from 'axios';
 import { AreaChart, XAxis, YAxis, CartesianGrid, Tooltip, Area, linearGradient } from 'recharts';
 import colors from '../styles/_settings.scss';
 
-//* Composant qui permet d'afficher une graphique ce la grypto (chart) grace à l'id passé en props
+//* Composant qui permet d'afficher une graphique de la crypto (chart) grace à l'id passé en props
 
 const CoinChart = ({ coinId, coinName }) => {
 
@@ -47,7 +47,7 @@ const CoinChart = ({ coinId, coinName }) => {
         setCoinData(dataArray);
       })
     //? console.log(duration);
-  }, [coinId, duration]); // Si la duration change on refait le fetch si l'on a le coinId
+  }, [coinId, duration]); // Si la durée change on refait le fetch si l'on a le coinId
 
   return (
     <div className="coin-chart">
