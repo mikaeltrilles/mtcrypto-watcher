@@ -5,19 +5,19 @@
   .table-header,
   .table-line {
     display: grid;
-    grid-template-columns: 308px 100px 100px 120px repeat(7, 1fr);
+    grid-template-columns: 308px 100px 100px 120px repeat(7, 1fr);  // 7 columns
 
-    @media screen and (max-width: 1020px) {
-      grid-template-columns: 276px 80px 80px 100px repeat(7, 1fr);
+    @media screen and (max-width: 1020px) { // Ecrans de PC et moins
+      grid-template-columns: 276px 80px 80px 100px repeat(7, 1fr);  // 7 columns
     }
-    @media screen and (max-width: 850px) {
-      grid-template-columns: 276px 80px 80px 100px repeat(4, 1fr);
+    @media screen and (max-width: 850px) {  // Ecran 13"
+      grid-template-columns: 276px 80px 80px 100px repeat(4, 1fr);  // 4 columns
     }
-    @media screen and (max-width: 715px) {
-      grid-template-columns: 220px 80px repeat(4, 1fr);
+    @media screen and (max-width: 715px) {  // Ecran mobile
+      grid-template-columns: 220px 80px repeat(4, 1fr); // 4 columns
     }
-    @media screen and (max-width: 540px) {
-      grid-template-columns: 170px 80px repeat(4, 1fr);
+    @media screen and (max-width: 540px) {  // Ecran mobile
+      grid-template-columns: 170px 80px repeat(4, 1fr); // 4 columns
     }
   }
   .table-header {

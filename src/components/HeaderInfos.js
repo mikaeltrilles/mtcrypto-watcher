@@ -28,12 +28,12 @@ const HeaderInfos = () => {
       </ul>
       <ul className="infos-mkt">
         <li className="global-mkt">
-        {/* //* Pourcentage du 24h sur le marché global */}
+          {/* //* Pourcentage du 24h sur le marché global */}
           Global Market Cap :
-          <PercentChange percent = {headerData.market_cap_change_percentage_24h_usd} /> 
+          <PercentChange percent={headerData.market_cap_change_percentage_24h_usd} />
         </li>
-        <li>BTC Dominance :{" "}{headerData.market_cap_percentage && headerData.market_cap_percentage.btc.toFixed(1)+"%"}</li>
-        <li>ETH Dominance :{" "}{headerData.market_cap_percentage && headerData.market_cap_percentage.eth.toFixed(1)+"%"}</li>
+        <li>BTC Dominance :{" "}{headerData.market_cap_percentage && headerData.market_cap_percentage.btc.toFixed(1) + "%"}</li>
+        <li>ETH Dominance :{" "}{headerData.market_cap_percentage && headerData.market_cap_percentage.eth.toFixed(1) + "%"}</li>
       </ul>
       <TableFilter />
     </div>

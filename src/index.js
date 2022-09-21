@@ -12,21 +12,16 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-
-//     <App />
-
-// );
-
 const store = createStore( // je creer le store au dessus de mon app
     rootReducer,
     composeWithDevTools(applyMiddleware(thunk))
 );
 
 ReactDOM.render(
+    <React.StrictMode>
     <Provider store={store}>
         <App />
-    </Provider>,
+    </Provider>
+    </React.StrictMode>,
     document.getElementById('root')
 );

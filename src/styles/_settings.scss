@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap");
 
-//* 🇫🇷 Choix des couleurs utilisées dans le projet - 🇺🇸 Choice of colors ion the project
+//* 🇫🇷 Choix des couleurs utilisées dans le projet
+//* 🇺🇸 Choice of colors ion the project
 
 $font1: "Saira Condensed", sans-serif;
 $font2: "Baloo Bhaina 2", cursive;
@@ -20,7 +21,8 @@ $black2: #0a0a0a;
 $shadow: 0 5px 15px #00000052;
 
 
-//* 🇫🇷 Exportation des couleurs dans une variable - 🇺🇸 Exportcolors on a var
+//* 🇫🇷 Exportation des couleurs dans une variable
+//* 🇺🇸 Exportcolors on a var
 :export {
   color1: $color1;
   green3: $green3;
@@ -55,7 +57,8 @@ body {
   margin: 0 auto;
   min-height: 100vh;
 }
-//* 🇫🇷 Retrait des décoration des liens et des listes - 🇺🇸 Remove the decoration of the links and lists
+//* 🇫🇷 Retrait des décoration des liens et des listes
+//* 🇺🇸 Remove the decoration of the links and lists
 li {
   list-style: none;
 }
@@ -64,7 +67,8 @@ a,
 a:visited {
   text-decoration: none;
 }
-//* 🇫🇷 Pour empêcher le clic sur les labels - 🇺🇸 To prevent the click on the labels
+//* 🇫🇷 Pour empêcher le clic sur les labels
+//* 🇺🇸 To prevent the click on the labels
 label {
   user-select: none;  
 }

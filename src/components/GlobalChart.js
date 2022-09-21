@@ -162,7 +162,7 @@ const GlobalChart = ({ coinsData }) => {
           chartData.push({
             // Nom de la crypto + pourcentage en 24h
             name: coinsData[i].symbol.toUpperCase() + " " + coinsData[i].market_cap_change_percentage_24h.toFixed(1) + "%",
-            // Valeur du marketcap de la crypto
+            // Valeur du marketcap de la crypto, taille de la crypto dans la treemap
             size: coinsData[i].market_cap,
             // Prix de la crypto
             current_price: coinsData[i].current_price,
@@ -176,14 +176,14 @@ const GlobalChart = ({ coinsData }) => {
     //? console.log(chartData);
 
     setDataArray(chartData);
-  }, [coinsData]);                                          // Appel de la fonction "setDataArray" à chaque fois que le tableau "coinsData" change
+  }, [coinsData]);                                          // Appel de la fonction "setDataArray" à chaque fois que le tableau "coinsData" change (est incrementé)
 
   //* 🇫🇷 Création du composant de la vue du treemap avec les données de la crypto (nom, marketcap %, prix)
   //* 🇺🇸 Creation of the treemap component with the crypto data (name, marketcap %, price)
 
   const TreemapToolTip = ({ active, payload }) => {
-    if (active && payload && payload.length > 0) {
-      return (
+    if (active && payload && payload.length > 0) {  // Controle que le composant soit actif et que le tableau "payload" ne soit pas vide
+      return (  // Retourne le composant
         <div className="custom-tooltip">
           <p className="label">
             {payload[0].payload.name} = {payload[0].payload.current_price.toLocaleString()} $
@@ -191,7 +191,7 @@ const GlobalChart = ({ coinsData }) => {
         </div>
       );
     }
-    return null;
+    return null; // Retourne null si je n'ai pas recu de données
   };
 
 
@@ -201,14 +201,14 @@ const GlobalChart = ({ coinsData }) => {
   return (
     <div className='global-chart'>
       <Treemap
-        width={730}
-        height={181}
-        data={dataArray}
-        dataKey="size"
-        stroke='#000000'
-        fill='null'
-        // aspectRatio={1}
-        ratio={4 / 3}
+        width={730} // largeur de la treemap
+        height={181}  //  hauteur de la treemap
+        data={dataArray}  //  données de la treemap
+        dataKey="size" //  taille de la crypto dans la treemap
+        stroke='#000000' //  contour de la bordure dans la treemap
+        fill='null' //  remplissage des case dans la treemap (null = pas de remplissage)
+        // aspectRatio={1} //  ratio de la treemap non actif car non satisfaisant pour le client
+        ratio={4 / 3} //  ratio de la treemap
         style={{
           strokeWidth: 1,
           strokeOpacity: 1,

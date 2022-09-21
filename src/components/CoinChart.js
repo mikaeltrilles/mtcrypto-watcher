@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { AreaChart, XAxis, YAxis, CartesianGrid, Tooltip, Area, linearGradient } from 'recharts';
+import { AreaChart, XAxis, YAxis, CartesianGrid, Tooltip, Area } from 'recharts';
 import colors from '../styles/_settings.scss';
 
 //* Composant qui permet d'afficher une graphique de la crypto (chart) grace à l'id passé en props

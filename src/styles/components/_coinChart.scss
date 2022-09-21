@@ -54,12 +54,13 @@
     }
 
     .recharts-wrapper {
-      margin-left: -105px;
-
+      margin-left: -105px; // décalage du graphique pour le faire rentrer dans le container
+      
       text {
         fill: $white1;
         font-size: 0.9rem;
       }
+      // Couleur de la date dans la bulle info sur le cours de la crypto
       .recharts-tooltip-wrapper {
         color: $color1;
         border-radius: 10px;
@@ -68,13 +69,13 @@
         .recharts-tooltip-label {
           font-size: 1.2rem;
         }
-
+        // arriere plan de du graphique du cours de la crypto
         .recharts-default-tooltip {
           background: rgba(255, 255, 255, 0.166);
 
           .recharts-tooltip-item-value,
           .recharts-tooltip-item-name {
-            color: $black1 !important;
+            color: $black1 !important; // couleur de la police du prix de la crypto
           }
         }
       }

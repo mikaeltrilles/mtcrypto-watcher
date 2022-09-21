@@ -57,9 +57,9 @@ const TableLine = ({ coin, index }) => {
             target="_blank"
             href={"https://www.coingecko.com/fr/pi%C3%A8ces/" + coin.name
               .toLowerCase()
-              .replace(" ", "-") // Remplace le premier espace par un tiret
-              .replace(" ", "-") // Remplace le deuxieme espace par un tiret
-              .replace(" ", "-") // Remplace le troisième espace par un tiret au cas ou d'une monnaie a quatre termes
+              .replaceAll(" ", "-") // Remplace tous les espaces par un tiret
+              // .replace(" ", "-") // Remplace le deuxieme espace par un tiret
+              // .replace(" ", "-") // Remplace le troisième espace par un tiret au cas ou d'une monnaie a quatre termes
             }
           >
             <img src="assets/info-square.svg" alt="info" />
