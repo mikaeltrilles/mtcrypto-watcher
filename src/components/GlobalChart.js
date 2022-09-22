@@ -149,18 +149,19 @@ const GlobalChart = ({ coinsData }) => {
     }
   };
 
+  //* quand les composons sont chargés, on lance la fonction de mise à jour des données
   useEffect(() => {
 
     let chartData = [];                                       // Création un tableau de données
 
-    if (coinsData.length > 0) {                               // Controle que le tableau "coinsData" ne soit pas vide
-      // Parcours le tavleau "coinsData" sur les 50 premières cryptos
+    if (coinsData.length > 0) {          //* Controle que le tableau "coinsData" ne soit pas vide
+      //* Parcours le tavleau "coinsData" sur les 50 premières cryptos
       for (let i = 0; i < 50; i++) {
         // avant de créer la treemap j'eclue les stablecoins
         if (excludeStableCoin(coinsData[i].symbol)) {
-          // je "pushe" les données dans le tableau "chartData"
+          // je "pushe" les données dans le tableau "chartData" a chaque tour de boucle
           chartData.push({
-            // Nom de la crypto + pourcentage en 24h
+            // Symbole  de la crypto + pourcentage en 24h
             name: coinsData[i].symbol.toUpperCase() + " " + coinsData[i].market_cap_change_percentage_24h.toFixed(1) + "%",
             // Valeur du marketcap de la crypto, taille de la crypto dans la treemap
             size: coinsData[i].market_cap,
@@ -175,15 +176,15 @@ const GlobalChart = ({ coinsData }) => {
     }
     //? console.log(chartData);
 
-    setDataArray(chartData);
-  }, [coinsData]);                                          // Appel de la fonction "setDataArray" à chaque fois que le tableau "coinsData" change (est incrementé)
+    setDataArray(chartData); //* On met à jour le tableau de donné "dataArray" avec le tableau "chartData"
+  }, [coinsData]);  //* Appel de la fonction "setDataArray" à chaque fois que le tableau "coinsData" change (est incrementé) C'est un Callback.
 
   //* 🇫🇷 Création du composant de la vue du treemap avec les données de la crypto (nom, marketcap %, prix)
   //* 🇺🇸 Creation of the treemap component with the crypto data (name, marketcap %, price)
 
-  const TreemapToolTip = ({ active, payload }) => {
+  const TreemapToolTip = ({ active, payload }) => { //* Création d'un composant de tooltip (bulle au survol) pour le treemap avec les données de la crypto (nom, marketcap %, prix)
     if (active && payload && payload.length > 0) {  // Controle que le composant soit actif et que le tableau "payload" ne soit pas vide
-      return (  // Retourne le composant
+      return (  // Retourne le composant avec les données de la crypto
         <div className="custom-tooltip">
           <p className="label">
             {payload[0].payload.name} = {payload[0].payload.current_price.toLocaleString()} $
@@ -207,7 +208,7 @@ const GlobalChart = ({ coinsData }) => {
         dataKey="size" //  taille de la crypto dans la treemap
         stroke='#000000' //  contour de la bordure dans la treemap
         fill='null' //  remplissage des case dans la treemap (null = pas de remplissage)
-        // aspectRatio={1} //  ratio de la treemap non actif car non satisfaisant pour le client
+        // aspectRatio={1} //  ratio de la treemap désactivé car non satisfaisant pour le client
         ratio={4 / 3} //  ratio de la treemap
         style={{
           strokeWidth: 1,
