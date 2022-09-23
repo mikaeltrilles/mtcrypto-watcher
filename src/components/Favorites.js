@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-// ⁡⁢⁣⁢🇫🇷 Composant pour mettre en favoris une crypto ⁡
-// ⁡⁣⁢⁣🇺🇸 Favorites component to add a crypto to favorites⁡
+// ⁡⁢⁣⁢🇫🇷 Composant pour mettre en favoris une crypto avec le localstorage⁡
+// ⁡⁣⁢⁣🇺🇸 Favorites component to add a crypto to favorites with localstorage ⁡
 
 const Favorites = ({ coinId }) => {
   //? console.log(coinId);
@@ -12,7 +12,7 @@ const Favorites = ({ coinId }) => {
     if (window.localStorage.coinList) {                       // Si le localStorage existe
       let favList = window.localStorage.coinList.split(',');  // On récupère la liste des favoris
       if (favList.includes(coinId)) {                         // Si la crypto est déjà dans la liste des favoris
-        setFav(true);                                         // Variable fav à true pour afficher l'icone "star full"
+        setFav(true);                                         // Variable fav à true pour afficher l'icone "étoile full"
       }
     }
   });
@@ -24,7 +24,7 @@ const Favorites = ({ coinId }) => {
     let favList = null;
 
     if (window.localStorage.coinList) {                       // Si le localStorage existe
-      favList = window.localStorage.coinList.split(',');      // On récupère la liste des favoris
+      favList = window.localStorage.coinList.split(',');      // On récupère la liste des favoris séparés par des virgules
     }
 
     if (favList) {                                            // Si la liste existe
@@ -32,11 +32,11 @@ const Favorites = ({ coinId }) => {
         window.localStorage.coinList = favList.filter((coin) => coin !== id);
         setFav(false);                                        // Retire la crypto de la liste des favoris
       } else {
-        window.localStorage.coinList = [...favList, coinId];  // Sinon, on ajoute la crypto à la liste des favoris
+        window.localStorage.coinList = [...favList, coinId];  // Sinon, on ajoute la crypto à la liste des favoris en destructurant favlist et en ajoutant la nouvelle crypto
         setFav(true);                                         // Ajoute la crypto à la liste des favoris
       }
     } else {
-      window.localStorage.coinList = coinId;                  // Sinon, on ajoute la crypto à la liste des coinlist
+      window.localStorage.coinList = coinId;                  // Sinon, on ajoute la crypto à la liste favoris coinlist
       setFav(true);
     }
     //? console.log(favList);

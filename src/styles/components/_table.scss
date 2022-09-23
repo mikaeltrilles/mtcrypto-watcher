@@ -58,6 +58,7 @@
       }
     }
     @media screen and (max-width: 715px) {
+      // * On masque le market cap (3) et le volume (4) sur les écrans mobiles
       li:nth-child(3),
       li:nth-child(4) {
         display: none;

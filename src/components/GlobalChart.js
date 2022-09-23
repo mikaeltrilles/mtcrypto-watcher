@@ -195,7 +195,6 @@ const GlobalChart = ({ coinsData }) => {
     return null; // Retourne null si je n'ai pas recu de données
   };
 
-
   //* 🇫🇷 Retour du composant de la vue du treemap avec les données de la crypto (nom, marketcap %, prix)
   //* 🇺🇸 Return of the treemap component with the data of the crypto (name, marketcap %, price)
 

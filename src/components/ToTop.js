@@ -4,6 +4,7 @@ import React from 'react';
 
 const ToTop = () => {
   return (
+    // * Bouton pour remonter en haut de page avec la fonction scrollTo()
     <div className="top" onClick={() => window.scrollTo(0, 0)}>
       <img src="./assets/arrow-icon.svg" alt="icon top" />
     </div>

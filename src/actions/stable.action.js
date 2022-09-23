@@ -1,4 +1,4 @@
-export const SET_STABLE_STATE = 'SET_STABLE_STATE';
+export const SET_STABLE_STATE = 'CHANGE_ETAT_STABLECOIN'; //  fonction qui permet d'afficher ou non des stablecoins
 
 
 export const setStableState = (bool) => { // fonction qui va créer l'action (ici, on a une seule action)

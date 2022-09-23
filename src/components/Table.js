@@ -9,7 +9,7 @@ import stableReducer from '../reducers/stable.reducer';
 //* les deux inputs range et text ont la même valeur rangeNumber 
 
 
-const Table = ({ coinsData }) => {
+const Table = ({ coinsData }) => { //* coinsData est un tableau d'objets que l'on reçoit en props depuis App.js
   //* Nombre de cryptos affichés sur la page
   const [rangeNumber, setRangeNumber] = useState(100);
 
@@ -17,7 +17,7 @@ const Table = ({ coinsData }) => {
 
   const showList = useSelector((state) => state.listReducer);
 
-  //* Entête du tableau 
+  //* Entête du tableau dans lequel on mappe les données de l'API et les boutons de tri
   const tableHeader = [
     "Prix",
     "Market Cap",
@@ -151,7 +151,7 @@ const Table = ({ coinsData }) => {
   };
 
   //* Variable qui permet de filtrer les données du tableau
-  const [orderBy, setOrderBy] = useState("");
+  const [orderBy, setOrderBy] = useState(""); //State qui permet de trier les données du tableau
 
   // console.log(coinsData);
 
@@ -161,14 +161,14 @@ const Table = ({ coinsData }) => {
         <div className="range-container">
           <span>
             Top{" "}
-            {/* Input de type texte pour saisir le nombre de crypto à lister entre 1 et 250 */}
+            {/* Input de type texte pour saisir le nombre de crypto à lister entre 1 et 250 connecté à l'input de type range (rangeNumber) */}
             <input
               type="text"
               value={rangeNumber}
               onChange={(e) => setRangeNumber(e.target.value)}
             />
           </span>
-          {/* Input de type range pour saisir le nombre de crypto à lister entre 1 et 250 */}
+          {/* Input de type range pour saisir le nombre de crypto à lister entre 1 et 250 connecté à l'input de type text (rangeNumber) */}
           <input
             type="range"
             min="1"
@@ -179,6 +179,7 @@ const Table = ({ coinsData }) => {
           <ToTop />
         </div>
         {/* Input de type radio pour l'entête des colonnes - Tri sur chaque input - le sélectionné est surbrillant */}
+        {/* //* Boucle sur le tableau tableHeader  avec un map() pour afficher les entêtes de colonnes */}
         {tableHeader.map((el) => (
           <li key={el}>
             <input
@@ -205,76 +206,76 @@ const Table = ({ coinsData }) => {
         .slice(0, rangeNumber)
 
         .filter((coin) => { //* 🇫🇷 On filtre les cryptos favorites 🇺🇸 We filter the favorite coins
-          if(showList){
+          if (showList) {
             let list = window.localStorage.coinList.split(",");
             if (list.includes(coin.id)) {
               return coin;
             }
-          } else{
+          } else {
             return coin;
           }
         })
 
-        .filter((coin) =>{
+        .filter((coin) => {
           //* 🇫🇷 Si l'utilisateur a coché la checkbox "Avec stable coin" on affiche les cryptos avec stable coin - 🇺🇸 If the user has checked the "With stable coin" checkbox, we display the coins with stable coin
           if (showStable) {
             return coin;
           } else {
-            if(excludeStableCoin(coin.symbol)){
+            if (excludeStableCoin(coin.symbol)) {
               return coin;
             }
           }
         })
 
-        //* 🇫🇷 On trie les cryptos - 🇺🇸 We sort the coins})
+        //* 🇫🇷 j'utilise la fonction sort() pour trier les données du tableau - 🇺🇸 I use the sort () function to sort the table data
         .sort((a, b) => {
-          switch (orderBy) {
-            case "Prix":
+          switch (orderBy) { //* 🇫🇷 Si l'utilisateur a sélectionné un entête de colonne, on trie les données du tableau - 🇺🇸 If the user has selected a column header, we sort the table data
+            case "Prix":  //*  🇫🇷 Tri sur le prix - 🇺🇸 Sort on the price
               return b.current_price - a.current_price;
             case "Prixreverse":
               return a.current_price - b.current_price;
 
-            case "Market Cap":
+            case "Market Cap": //*  🇫🇷 Tri sur le Market Cap - 🇺🇸 Sort on the Market Cap
               return b.market_cap - a.market_cap;
             case "Market Capreverse":
               return a.market_cap - b.market_cap;
 
-            case "Volume":
+            case "Volume":  //*  🇫🇷 Tri sur le Volume - 🇺🇸 Sort on the Volume
               return b.total_volume - a.total_volume;
             case "Volumereverse":
               return a.total_volume - b.total_volume;
 
-            case "1h":
+            case "1h":  //*  🇫🇷 Tri sur le % 1h - 🇺🇸 Sort on the % 1h
               return b.price_change_percentage_1h_in_currency - a.price_change_percentage_1h_in_currency;
             case "1hreverse":
               return a.price_change_percentage_1h_in_currency - b.price_change_percentage_1h_in_currency;
 
-            case "1j":
+            case "1j":  //*  🇫🇷 Tri sur le % 1j - 🇺🇸 Sort on the % 1j
               return b.price_change_percentage_24h - a.price_change_percentage_24h;
             case "1jreverse":
               return a.price_change_percentage_24h - b.price_change_percentage_24h;
 
-            case "1s":
+            case "1s":  //*  🇫🇷 Tri sur le % 1s - 🇺🇸 Sort on the % 1s
               return b.price_change_percentage_7d_in_currency - a.price_change_percentage_7d_in_currency;
             case "1sreverse":
               return a.price_change_percentage_7d_in_currency - b.price_change_percentage_7d_in_currency;
 
-            case "1m":
+            case "1m":  //*  🇫🇷 Tri sur le % 1m - 🇺🇸 Sort on the % 1m
               return b.price_change_percentage_30d_in_currency - a.price_change_percentage_30d_in_currency;
             case "1mreverse":
               return a.price_change_percentage_30d_in_currency - b.price_change_percentage_30d_in_currency;
 
-            case "6m":
+            case "6m":  //*  🇫🇷 Tri sur le % 6m - 🇺🇸 Sort on the % 6m
               return b.price_change_percentage_200d_in_currency - a.price_change_percentage_200d_in_currency;
             case "6mreverse":
               return a.price_change_percentage_200d_in_currency - b.price_change_percentage_200d_in_currency;
 
-            case "1a":
+            case "1a":  //*  🇫🇷 Tri sur le % 1a - 🇺🇸 Sort on the % 1a
               return b.price_change_percentage_1y_in_currency - a.price_change_percentage_1y_in_currency;
             case "1areverse":
               return a.price_change_percentage_1y_in_currency - b.price_change_percentage_1y_in_currency;
 
-            case "ATH":
+            case "ATH": //*  🇫🇷 Tri sur le % ATH - 🇺🇸 Sort on the % ATH
               return b.ath_change_percentage - a.ath_change_percentage;
             case "ATHreverse":
               return a.ath_change_percentage - b.ath_change_percentage;
@@ -284,6 +285,7 @@ const Table = ({ coinsData }) => {
           }
         })
         .map((coin, index) => (
+          //? l'index permet de d'afficher un numéro devant la crypto dans la liste
           <TableLine coin={coin} index={index} key={index} />
         ))}
     </div>

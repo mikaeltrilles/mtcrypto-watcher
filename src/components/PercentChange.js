@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import colors from "../styles/_settings.scss";
 
-  //* Ici je gère le changement de la couleur en fonction du pourcentage positif ou négatif
+//* Ici je gère le changement de la couleur en fonction du pourcentage positif ou négatif
 
-const PercentChange = ({ percent }) => { 
+const PercentChange = ({ percent }) => {
   //* stucturing de l'objet props pour ne pas ecrire props.percent
   const [color, setColor] = useState();
 

@@ -62,7 +62,7 @@ Sofwares :
 * [ReactJS](https://reactjs.org/) - JavaScript library (front-end)
 * [Visual Studio Code](https://code.visualstudio.com/download) - IDE
 * [Recharts documentation](https://recharts.org/en-US/examples/CustomContentTreemap) - Custom Treemap
-![header](src/assets/readme/treemap.jpg)
+![header](src/assets/readme/treemap.png)
 
 Tools :
 
@@ -280,7 +280,7 @@ Coin price chart API structure :
 https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${duration}${duration > 32 ? "&interval=daily" : ""}
 ```
 
-![chart](src/assets/readme/chart.jpg)
+![chart](src/assets/readme/chart.png)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://www.buymeacoffee.com/mtdevweb)
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://www.buymeacoffee.com/mtdevweb)

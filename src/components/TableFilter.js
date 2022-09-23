@@ -17,9 +17,6 @@ const TableFilter = () => {
     dispatch(setListDisplay(showFavList));  // On envoie la valeur de showFavList dans le store Redux
   }, [showStable, showFavList]);
 
-
-
-
   return ( // Affichage du header
     <div className="table-filters">
       <div className="table-filters-container">
