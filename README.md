@@ -3,7 +3,6 @@
 [![wakatime](https://wakatime.com/badge/user/933ebfa6-42e4-4a54-b3fc-658e9f1ab22f/project/966d1b96-0d87-43ee-96c6-de90f183c69e.svg)](https://wakatime.com/badge/user/933ebfa6-42e4-4a54-b3fc-658e9f1ab22f/project/966d1b96-0d87-43ee-96c6-de90f183c69e)
 [![GitHub version](https://badge.fury.io/gh/mikaeltrilles%2Fbeontrade-watcher.svg)](https://badge.fury.io/gh/mikaeltrilles%2Fbeontrade-watcher)
 [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
-[![Donate with Bitcoin](https://en.cryptobadges.io/badge/micro/3DACSr469ga7Xb2BbfVvC58qMZ74oZapJU)](https://en.cryptobadges.io/donate/3DACSr469ga7Xb2BbfVvC58qMZ74oZapJU)
 [![Buy me a coffee](https://img.shields.io/static/v1.svg?label=Buy%20me%20a%20coffee&message=☕️&color=grey&logo=buy%20me%20a%20coffee&logoColor=white&labelColor=6f4e37)](https://www.buymeacoffee.com/mtdevweb)
 
 ![npm version](https://img.shields.io/badge/npm-8.12.1-red)
@@ -289,5 +288,3 @@ https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&da
 ## If you like this project, please consider donating with Bitcoin or Buy my a coffee
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/mtdevweb)
-
-[![Donate with Bitcoin](https://en.cryptobadges.io/badge/big/3DACSr469ga7Xb2BbfVvC58qMZ74oZapJU)](https://en.cryptobadges.io/donate/3DACSr469ga7Xb2BbfVvC58qMZ74oZapJU)
